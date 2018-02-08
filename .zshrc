@@ -39,12 +39,20 @@ setopt appendhistory
 ####################
 ## Completion
 ####################
+# specify completion functions
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+# add color at the time of completion
 zstyle ':completion:*' list-colors ''
+# scroll completion prompt
+# show only
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' menu select=2
+# selectable
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+# can select arrow keys
+zstyle ':completion:*' menu select=2
+# extend display
 zstyle ':completion:*' verbose true
+
 zstyle :compinstall filename '~/.zshrc'
 
 # complete initialize
