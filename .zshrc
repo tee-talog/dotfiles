@@ -35,6 +35,12 @@ HISTSIZE=100000
 SAVEHIST=100000
 # append history file
 setopt appendhistory
+# specify format
+HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
+# line in the middle of the comment
+setopt interactivecomments
+# not add duplicate continuity command to histfile
+setopt hist_ignore_dups
 
 ####################
 ## Completion
@@ -80,12 +86,24 @@ bindkey -e
 alias la='ls -alh --color=auto'
 alias df='df -h'
 alias psa='ps -auxf'
-alias start='cygstart'
+alias psah='ps -auxf | grep ${HOME}'
 alias sjis='(){ $* |& iconv -f cp932 -t utf-8 }'
+alias less='less -MNR'
+alias tsql='trdsql'
 
 local TRASH_DIR="~/.Trash"
 mkdir -p "${TRASH_DIR}"
 alias rm="mv --backup=numbered --target-directory=${TRASH_DIR}"
+
+function f_killall() {
+  ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
+}
+alias killall='f_killall'
+
+# turn off <C-?> shortcut
+stty stop undef
+stty swtch undef
+stty susp undef
 
 ####################
 ## Character
