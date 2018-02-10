@@ -1,0 +1,7 @@
+.git/
+.vim/.netrwhist
+.vim/backups/
+.vim/swaps/
+.vim/undos/
+.vim/plugins/
+
