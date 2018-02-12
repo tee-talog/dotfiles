@@ -1,0 +1,25 @@
+[user]
+  name = talog
+  email = tee.talog@gmail.com
+[core]
+  quotepath = false
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[alias]
+  graph = log --graph --all --decorate --color
+  co = checkout
+  status = s
+  merged-feature-branch = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
+  mfb = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
+[merge]
+  ff = false
+[pull]
+  ff = only
+[diff]
+  algorithm = histogram
+  tool = vimdiff
+[difftool "vimdiff"]
+  cmd = vimdiff -o $LOCAL $REMOTE
+
