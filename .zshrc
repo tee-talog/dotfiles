@@ -91,10 +91,6 @@ alias sjis='(){ $* |& iconv -f cp932 -t utf-8 }'
 alias less='less -MNR'
 alias tsql='trdsql'
 
-local TRASH_DIR="~/.Trash"
-mkdir -p "${TRASH_DIR}"
-alias rm="mv --backup=numbered --target-directory=${TRASH_DIR}"
-
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
 }
