@@ -5,5 +5,6 @@ My dotfiles
 * .zshrc
 * .zshenv
 * .editorconfig
+* .vimrc
 * .vim/
 
