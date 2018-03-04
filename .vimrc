@@ -74,6 +74,8 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#add('posva/vim-vue')
 "" Show indent
 call dein#add('Yggdroot/indentLine')
+"" Show replacing preview
+call dein#add('osyo-manga/vim-over')
 
 "" End installation
 call dein#end()
@@ -96,6 +98,8 @@ let g:user_emmet_settings = {
 
 "" vue highlight
 autocmd vimrc FileType vue syntax sync fromstart
+"" replacing preview replace
+nnoremap <silent> <Space>o :OverCommandLine<CR>%s//g<Left><Left>
 
 
 "================================================"
