@@ -41,14 +41,13 @@ let s:plugin_dir = '~/.vim/plugins'
 "" dein.vim installation dir
 let s:dein_repo_dir = s:plugin_dir . '/dein.vim'
 
-"set runtimepath+=s:dein_repo_dir
-execute 'set runtimepath+=' . expand(s:dein_repo_dir)
-
 "" if the dein.vim is not exists then it download and install
-if !isdirectory(s:dein_repo_dir)
-  execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(expand(s:dein_repo_dir))
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath+=' . expand(s:dein_repo_dir)
 endif
-"endif
 
 "--------------------------------------"
 " Install plugins
