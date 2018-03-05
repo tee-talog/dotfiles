@@ -78,6 +78,8 @@ call dein#add('Yggdroot/indentLine')
 call dein#add('osyo-manga/vim-over')
 "" Show git status column
 call dein#add('airblade/vim-gitgutter')
+"" commandline color
+call dein#add('itchyny/lightline.vim')
 
 "" End installation
 call dein#end()
@@ -103,6 +105,12 @@ autocmd vimrc FileType vue syntax sync fromstart
 
 "" replacing preview replace
 nnoremap <silent> <Space>o :OverCommandLine<CR>%s//g<Left><Left>
+
+let g:lightline = {
+  \   'colorscheme': 'jellybeans',
+  \ }
+set laststatus=2
+set noshowmode
 
 
 "================================================"
