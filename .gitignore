@@ -1,7 +1,8 @@
 .git/
 .vim/.netrwhist
-.vim/backups/
-.vim/swaps/
-.vim/undos/
-.vim/plugins/
+.vim/backups/*
+.vim/swaps/*
+.vim/undos/*
+.vim/plugins/*
+!.gitkeep
 
