@@ -73,6 +73,10 @@ setopt mark_dirs
 # complete in command-line option
 # e.g. ./config --prefix=/compiletion/here
 setopt magic_equal_subst
+# no remove trailing slash of command line
+setopt noautoremoveslash
+# compacked complete list display
+setopt list_packed
 
 # use PCRE
 setopt re_match_pcre
@@ -111,4 +115,18 @@ stty susp undef
 ## Character
 ####################
 export LANG=ja_JP.UTF-8
+export LC_ALL=C.UTF-8
+
+####################
+## Other
+####################
+# no beep sound when complete list displayed
+setopt nolistbeep
+# command correct edition before each completion attempt
+setopt correct
+
+# auto change directory
+setopt auto_cd
+# auto directory pushd that you can get dirs list by cd -[tab]
+setopt auto_pushd
 
