@@ -89,7 +89,6 @@ alias psa='ps -auxf'
 alias psah='ps -auxf | grep ${HOME}'
 alias sjis='(){ $* |& iconv -f cp932 -t utf-8 }'
 alias less='less -MNR'
-alias tsql='trdsql'
 
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
