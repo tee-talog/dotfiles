@@ -70,7 +70,7 @@ call dein#add('mattn/emmet-vim')
 call dein#add('leafgarland/typescript-vim')
 "" EditorConfig
 call dein#add('editorconfig/editorconfig-vim')
-"" Vue Hilight
+"" Vue Highlight
 call dein#add('posva/vim-vue')
 "" Show indent
 call dein#add('Yggdroot/indentLine')
