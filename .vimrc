@@ -70,7 +70,7 @@ call dein#add('mattn/emmet-vim')
 call dein#add('leafgarland/typescript-vim')
 "" EditorConfig
 call dein#add('editorconfig/editorconfig-vim')
-"" Vue Hilight
+"" Vue Highlight
 call dein#add('posva/vim-vue')
 "" Show indent
 call dein#add('Yggdroot/indentLine')
@@ -80,6 +80,8 @@ call dein#add('osyo-manga/vim-over')
 call dein#add('airblade/vim-gitgutter')
 "" commandline color
 call dein#add('itchyny/lightline.vim')
+"" JSON plugin
+call dein#add('elzr/vim-json')
 
 "" End installation
 call dein#end()
@@ -111,6 +113,9 @@ let g:lightline = {
   \ }
 set laststatus=2
 set noshowmode
+
+"" disable conceal in JSON file
+let g:vim_json_syntax_conceal = 0
 
 
 "================================================"
