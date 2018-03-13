@@ -80,6 +80,8 @@ call dein#add('osyo-manga/vim-over')
 call dein#add('airblade/vim-gitgutter')
 "" commandline color
 call dein#add('itchyny/lightline.vim')
+"" JSON plugin
+call dein#add('elzr/vim-json')
 
 "" End installation
 call dein#end()
@@ -111,6 +113,9 @@ let g:lightline = {
   \ }
 set laststatus=2
 set noshowmode
+
+"" disable conceal in JSON file
+let g:vim_json_syntax_conceal = 0
 
 
 "================================================"
