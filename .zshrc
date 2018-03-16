@@ -132,6 +132,9 @@ select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{}.,|"
 zstyle ':zle:*' word-style unspecified
 
+# show multibyte file name
+setopt print_eight_bit
+
 ####################
 ## Other
 ####################
