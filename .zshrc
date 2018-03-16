@@ -81,6 +81,11 @@ setopt list_packed
 # use PCRE
 setopt re_match_pcre
 
+# no beep sound when complete list displayed
+setopt nolistbeep
+# command correct edition before each completion attempt
+setopt correct
+
 ####################
 ## Key bind
 ####################
@@ -127,11 +132,6 @@ zstyle ':zle:*' word-style unspecified
 ####################
 ## Other
 ####################
-# no beep sound when complete list displayed
-setopt nolistbeep
-# command correct edition before each completion attempt
-setopt correct
-
 # auto change directory
 setopt auto_cd
 # auto directory pushd that you can get dirs list by cd -[tab]
