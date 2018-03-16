@@ -129,7 +129,7 @@ export LC_ALL=C.UTF-8
 autoload -Uz select-word-style
 select-word-style default
 # delimiter charcters
-zstyle ':zle:*' word-chars " /=;@:{}.,|"
+zstyle ':zle:*' word-chars " /=;@:{}.,|-_"
 zstyle ':zle:*' word-style unspecified
 
 # show multibyte file name
