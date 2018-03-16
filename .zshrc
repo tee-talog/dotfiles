@@ -58,6 +58,9 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' menu select=2
 # extend display
 zstyle ':completion:*' verbose true
+# after "../", not complete current directory
+zstyle ':completion:*' ignore-parents parent pwd ..
+
 
 zstyle :compinstall filename '~/.zshrc'
 
