@@ -56,6 +56,8 @@ setopt hist_reduce_blanks
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 # add color at the time of completion
 zstyle ':completion:*' list-colors ''
+# ignore case completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
 # scroll completion prompt
 # show only
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
