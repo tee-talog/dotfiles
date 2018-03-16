@@ -142,6 +142,8 @@ setopt print_eight_bit
 setopt auto_cd
 # auto directory pushd that you can get dirs list by cd -[tab]
 setopt auto_pushd
+# not add to move history if duplicate directory in move history
+setopt pushd_ignore_dups
 
 # no beep sound
 setopt no_beep
