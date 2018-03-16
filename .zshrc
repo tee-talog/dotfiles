@@ -117,6 +117,13 @@ stty susp undef
 export LANG=ja_JP.UTF-8
 export LC_ALL=C.UTF-8
 
+# change word delimiter
+autoload -Uz select-word-style
+select-word-style default
+# delimiter charcters
+zstyle ':zle:*' word-chars " /=;@:{}.,|"
+zstyle ':zle:*' word-style unspecified
+
 ####################
 ## Other
 ####################
