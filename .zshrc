@@ -42,6 +42,13 @@ setopt interactivecomments
 # not add duplicate continuity command to histfile
 setopt hist_ignore_dups
 
+# refer to the command history among other zsh process
+setopt share_history
+# not add the same command to history
+setopt hist_ignore_all_dups
+# trim space when add to history
+setopt hist_reduce_blanks
+
 ####################
 ## Completion
 ####################
