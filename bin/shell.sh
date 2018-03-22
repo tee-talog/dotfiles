@@ -15,7 +15,7 @@ function f_install_zsh() {
     if [ $? -eq 0 ]; then
         chsh -s /bin/zsh
     else
-        echo "Please change shell"
+        echo "Please change shell yourself"
     fi
 
     return 0
