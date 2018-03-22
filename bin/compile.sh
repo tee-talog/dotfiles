@@ -1,6 +1,6 @@
 #!/bin/bash
 
 function f_compile() {
-    zcompile .zshrc
+  zcompile .zshrc
 }
 
