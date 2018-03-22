@@ -83,7 +83,7 @@ setopt auto_param_slash
 setopt mark_dirs
 
 # complete in command-line option
-# e.g. ./config --prefix=/compiletion/here
+# e.g. ./config --prefix=/completion/here
 setopt magic_equal_subst
 # no remove trailing slash of command line
 setopt noautoremoveslash
