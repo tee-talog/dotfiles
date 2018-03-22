@@ -69,6 +69,10 @@ zstyle ':completion:*' menu select=2
 zstyle ':completion:*' verbose true
 # after "../", not complete current directory
 zstyle ':completion:*' ignore-parents parent pwd ..
+# use cache
+zstyle ':completion:*' use-cache yes
+# ignore case
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 
 zstyle :compinstall filename '~/.zshrc'
