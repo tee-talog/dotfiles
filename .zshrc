@@ -56,6 +56,8 @@ setopt hist_reduce_blanks
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 # add color at the time of completion
 zstyle ':completion:*' list-colors ''
+# ignore case completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
 # scroll completion prompt
 # show only
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -67,6 +69,10 @@ zstyle ':completion:*' menu select=2
 zstyle ':completion:*' verbose true
 # after "../", not complete current directory
 zstyle ':completion:*' ignore-parents parent pwd ..
+# use cache
+zstyle ':completion:*' use-cache yes
+# ignore case
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 
 zstyle :compinstall filename '~/.zshrc'
@@ -81,7 +87,7 @@ setopt auto_param_slash
 setopt mark_dirs
 
 # complete in command-line option
-# e.g. ./config --prefix=/compiletion/here
+# e.g. ./config --prefix=/completion/here
 setopt magic_equal_subst
 # no remove trailing slash of command line
 setopt noautoremoveslash
