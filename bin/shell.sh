@@ -8,7 +8,13 @@ function f_install_zsh() {
   fi
 
   # install zsh
-  sudo yum -y install zsh
+  type yum >/dev/null 2>&1
+  if [ $? -eq 0 ]; then
+    sudo yum -y install zsh
+  else
+    echo "cannot use yum"
+    return 1
+  fi
 
   # change shell
   type chsh >/dev/null 2>&1

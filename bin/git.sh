@@ -11,6 +11,12 @@ function f_install_git() {
   local readonly _temp_dir_name="$(mktemp -d)"
 
   # install Git
-  sudo yum install -y git-all
+  type yum >/dev/null 2>&1
+  if [ $? -eq 0 ]; then
+    sudo yum install -y git-all
+  else
+    echo "cannot use yum"
+    return 1
+  fi
 }
 
