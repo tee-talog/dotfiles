@@ -8,6 +8,7 @@ function f_install_zplug() {
   fi
 
   # install zplug
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+  curl -sL --proto-redir -all,https \
+      https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 }
 
