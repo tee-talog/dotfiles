@@ -2,7 +2,7 @@
 
 function f_install_git() {
   # is Git installed?
-  type zsh >/dev/null 2>&1
+  type git >/dev/null 2>&1
   if [ $? -eq 0 ]; then
     return 0
   fi
