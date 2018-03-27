@@ -26,7 +26,9 @@ zplug load --verbose
 # syntax highlighting color
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 export ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=green'
-export ZSH_HIGHLIGHT_STYLES[globbing]='fg=yellow'####################
+export ZSH_HIGHLIGHT_STYLES[globbing]='fg=yellow'
+
+####################
 ## Color
 ####################
 # activate color
