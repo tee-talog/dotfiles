@@ -1,4 +1,34 @@
 ####################
+## Plugins
+####################
+source ~/.zplug/init.zsh
+
+# zsh 256 clor
+zplug "chrissicool/zsh-256color"
+# emojify
+zplug "mrowa44/emojify", as:command
+# syntax highlighting
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+#------------------#
+# Apply
+#------------------#
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  zplug install
+fi
+# source plugins and add commands to $PATH
+zplug load --verbose
+
+#------------------#
+# Settings
+#------------------#
+# syntax highlighting color
+export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+export ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=green'
+export ZSH_HIGHLIGHT_STYLES[globbing]='fg=yellow'
+
+####################
 ## Color
 ####################
 # activate color
