@@ -146,6 +146,7 @@ alias psah='ps -auxf | grep ${HOME}'
 alias sjis='(){ $* |& iconv -f cp932 -t utf-8 }'
 alias less='less -MNR'
 alias crontab='crontab -i'
+alias grep='grep color=auto'
 
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
