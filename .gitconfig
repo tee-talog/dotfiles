@@ -10,7 +10,7 @@
 [alias]
   graph = log --graph --all --decorate --color
   co = checkout
-  status = s
+  s = status
   merged-feature-branch = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
   mfb = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
 [merge]
