@@ -192,3 +192,6 @@ setopt pushd_ignore_dups
 # no beep sound
 setopt no_beep
 
+# set default editor
+export EDITOR="$(which vim)"
+
