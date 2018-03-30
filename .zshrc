@@ -46,9 +46,11 @@ local ZSH_WHITE="%F{255}"
 ## Prompt
 ####################
 # normal
-PROMPT=$BLUE'%# '$DEFAULT
+PROMPT="
+$ZSH_GRAY [%D{%Y/%m/%d} %*]
+$ZSH_BLUE%(!,#,>) $ZSH_WHITE"
 # right
-RPROMPT=$GREEN'[%~]'$DEFAULT
+RPROMPT=$ZSH_GREEN'[%~]'$ZSH_WHITE
 setopt transient_rprompt
 
 # continue
