@@ -36,21 +36,25 @@ autoload -U colors
 colors
 
 # define colors
-local GREEN=$'%{\e[1;32m%}'
-local BLUE=$'%{\e[1;34m%}'
-local DEFAULT=$'%{\e[1;m%}'
+local ZSH_RED="%F{009}"
+local ZSH_BLUE="%F{063}"
+local ZSH_GREEN="%F{047}"
+local ZSH_GRAY="%F{244}"
+local ZSH_WHITE="%F{255}"
 
 ####################
 ## Prompt
 ####################
 # normal
-PROMPT=$BLUE'%# '$DEFAULT
+PROMPT="
+$ZSH_GRAY [%D{%Y/%m/%d} %*]
+$ZSH_BLUE%(!,#,>) $ZSH_WHITE"
 # right
-RPROMPT=$GREEN'[%~]'$DEFAULT
+RPROMPT=$ZSH_GREEN'[%~]'$ZSH_WHITE
 setopt transient_rprompt
 
 # continue
-PROMPT2="%_%% "
+PROMPT2="%_> "
 # suggest
 SPROMPT="%r is correct? [n,y,a,e]: "
 
@@ -191,4 +195,7 @@ setopt pushd_ignore_dups
 
 # no beep sound
 setopt no_beep
+
+# set default editor
+export EDITOR="$(which vim)"
 
