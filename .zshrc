@@ -36,9 +36,9 @@ autoload -U colors
 colors
 
 # define colors
-local GREEN=$'%{\e[1;32m%}'
-local BLUE=$'%{\e[1;34m%}'
-local DEFAULT=$'%{\e[1;m%}'
+local ZSH_BLUE="%F{063}"
+local ZSH_GREEN="%F{047}"
+local ZSH_WHITE="%F{255}"
 
 ####################
 ## Prompt
