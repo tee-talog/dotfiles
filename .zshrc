@@ -50,7 +50,7 @@ RPROMPT=$GREEN'[%~]'$DEFAULT
 setopt transient_rprompt
 
 # continue
-PROMPT2="%_%% "
+PROMPT2="%_> "
 # suggest
 SPROMPT="%r is correct? [n,y,a,e]: "
 
