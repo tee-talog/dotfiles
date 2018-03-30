@@ -36,8 +36,10 @@ autoload -U colors
 colors
 
 # define colors
+local ZSH_RED="%F{009}"
 local ZSH_BLUE="%F{063}"
 local ZSH_GREEN="%F{047}"
+local ZSH_GRAY="%F{244}"
 local ZSH_WHITE="%F{255}"
 
 ####################
