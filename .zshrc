@@ -151,6 +151,11 @@ alias sjis='(){ $* |& iconv -f cp932 -t utf-8 }'
 alias less='less -MNR'
 alias crontab='crontab -i'
 
+function f_grep_color() {
+  \grep "$1" --color=auto
+}
+alias grep='f_grep_color'
+
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
 }
