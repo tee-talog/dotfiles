@@ -3,6 +3,8 @@
   email = tee.talog@gmail.com
 [core]
   quotepath = false
+  editor = vim -c \"set fenc=utf-8\"
+  autocrlf = input
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
@@ -10,9 +12,11 @@
 [alias]
   graph = log --graph --all --decorate --color
   co = checkout
-  status = s
+  s = status
   merged-feature-branch = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
   mfb = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
+  b = branch
+  diff-name = diff --name-only
 [merge]
   ff = false
 [pull]
