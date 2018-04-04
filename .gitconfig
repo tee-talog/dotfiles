@@ -16,6 +16,7 @@
   merged-feature-branch = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
   mfb = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
   b = branch
+  diff-name = diff --name-only
 [merge]
   ff = false
 [pull]
