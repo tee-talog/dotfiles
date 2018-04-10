@@ -8,7 +8,7 @@ fi
 
 function f_load_zshenv() {
   if [ -e ~/.zshenv ]; then
-    mv ~/.zshenv{,_org}
+    cp ~/.zshenv{,_org}
   fi
   echo "${_append_str}" >>~/.zshenv
 }

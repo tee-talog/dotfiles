@@ -2,7 +2,7 @@
 
 function f_install_zplug() {
   # is zplug installed?
-  type zplug >/dev/null 2>&1
+  type zplug &>/dev/null
   if [ $? -eq 0 ]; then
     return 0
   fi
