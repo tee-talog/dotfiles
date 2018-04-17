@@ -197,6 +197,8 @@ setopt auto_pushd
 # not add to move history if duplicate directory in move history
 setopt pushd_ignore_dups
 
+# set pager
+export PAGER=less
 # no beep sound
 setopt no_beep
 
