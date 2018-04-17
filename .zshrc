@@ -148,7 +148,7 @@ alias du='du -h'
 alias psa='ps -auxf'
 alias psah='ps -auxf | grep ${HOME}'
 alias sjis='(){ $* |& iconv -f cp932 -t utf-8 }'
-alias less='less -MNR'
+alias less='less -iWMNR'
 alias crontab='crontab -i'
 
 function f_grep_color() {
