@@ -199,6 +199,15 @@ setopt pushd_ignore_dups
 
 # set pager
 export PAGER=less
+# color
+# reference: https://unix.stackexchange.com/questions/108699/documentation-on-less-termcap-variables
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 2)   # Begins blinking
+export LESS_TERMCAP_md=$(tput bold; tput setaf 223) # Begins bold
+export LESS_TERMCAP_us=$(tput bold; tput setaf 131) # Begins underline
+export LESS_TERMCAP_me=$(tput sgr0)                 # Ends bold, blink and underline
+export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4) # Begins standout-mode
+export LESS_TERMCAP_se=$(tput rmso; tput sgr0)                  # Ends standout-mode
+
 # no beep sound
 setopt no_beep
 
