@@ -10,6 +10,8 @@ else
     mkdir -p "${TRASH_DIR}"
   elif [ type /bin/mkdir &>/dev/null ]; then
     /bin/mkdir -p "${TRASH_DIR}"
+  elif [ type /usr/bin/mkdir &>/dev/null ]; then
+    /usr/bin/mkdir -p "${TRASH_DIR}"
   else
     echo "cannot create \`~/.Trash\` dir."
   fi
