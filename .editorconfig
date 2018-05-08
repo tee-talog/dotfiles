@@ -64,7 +64,7 @@ indent_style = space
 ## ShellScript
 ####################
 [*.{sh,bash,zsh}]
-indent_size = 4
+indent_size = 2
 indent_style = space
 
 ####################
