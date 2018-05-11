@@ -82,6 +82,8 @@ call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/lightline.vim')
 "" JSON plugin
 call dein#add('elzr/vim-json')
+"" Syntax highlighting for Stylus
+call dein#add('wavded/vim-stylus')
 
 "" End installation
 call dein#end()
