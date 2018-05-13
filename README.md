@@ -7,4 +7,6 @@ My dotfiles
 * .editorconfig
 * .vimrc
 * .vim/
+* .gitconfig
+* .npmrc
 
