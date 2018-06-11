@@ -1,0 +1,110 @@
+{
+    "editor.fontFamily": "'Myrica M', Consolas, 'Courier New', monospace, 'Segoe UI Emoji'",
+    "editor.renderWhitespace": "none",
+    "editor.insertSpaces": false,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.mouseWheelZoom": true,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "html.format.indentInnerHtml": true,
+    "git.path": "C:\\cygwin64\\bin\\git",
+    "files.autoGuessEncoding": false,
+    "editor.minimap.enabled": false,
+    "vim.useSystemClipboard": true,
+    "vim.cmdLineInitialColon": true,
+    "vim.hlsearch": true,
+    "vim.visualstar": true,
+    "vim.useCtrlKeys": true,
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-x>": false,
+        "<C-s>": false,
+        "<C-w>": false,
+        "<C-o>": false,
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<C-f>"],
+            "after": ["<C-o>", "l"]
+        },
+        {
+            "before": ["<C-b>"],
+            "after": ["<C-o>", "h"]
+        },
+        {
+            "before": ["<C-a>"],
+            "after": ["<C-o>", "^"]
+        },
+        {
+            "before": ["<C-e>"],
+            "after": ["<C-o>", "$"]
+        },
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<Esc>", "<Esc>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": ":noh",
+                    "args": []
+                }
+            ]
+        },
+            {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
+        {
+            "before": ["n"],
+            "after": ["n", "z", "z"]
+        },
+        {
+            "before": ["N"],
+            "after": ["N", "z", "z"]
+        },
+        {
+            "before": ["Y"],
+            "after": ["y", "$"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-e>"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-y>"]
+        },
+    ],
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1"
+    },
+    "terminal.integrated.shellArgs.windows": [
+        "-l"
+    ]
+}
