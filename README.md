@@ -9,4 +9,5 @@ My dotfiles
 * .vim/
 * .gitconfig
 * .npmrc
+* vscode
 
