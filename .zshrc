@@ -151,21 +151,14 @@ alias sjis='(){ $* |& iconv -f cp932 -t utf-8 }'
 alias less='less -iWMNR'
 alias crontab='crontab -i'
 alias tap='tee >(xargs echo >&2)'
-
-function f_grep_color() {
-  \grep "$1" --color=auto
-}
-alias grep='f_grep_color'
+alias grep='(){ \grep "$1" --color=auto }'
+alias joinline='(){ paste -s -d "$1" - }'
+alias splitline='(){ tr "$1" "\n" }'
 
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
 }
 alias killall='f_killall'
-
-function f_sjis_to_utf8() {
-  $* |& iconv -f cp932 -t utf-8
-}
-alias sjis='f_sjis_to_utf8'
 
 # turn off <C-?> shortcut
 stty stop undef
