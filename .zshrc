@@ -150,6 +150,7 @@ alias psah='ps -auxf | grep ${HOME}'
 alias sjis='(){ $* |& iconv -f cp932 -t utf-8 }'
 alias less='less -iWMNR'
 alias crontab='crontab -i'
+alias tap='tee >(xargs echo >&2)'
 
 function f_grep_color() {
   \grep "$1" --color=auto
