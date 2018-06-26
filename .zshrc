@@ -152,6 +152,8 @@ alias less='less -iWMNR'
 alias crontab='crontab -i'
 alias tap='tee >(xargs echo >&2)'
 alias grep='(){ \grep "$1" --color=auto }'
+alias joinline='(){ paste -s -d "$1" - }'
+alias splitline='(){ tr "$1" "\n" }'
 
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
