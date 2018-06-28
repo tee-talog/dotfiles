@@ -22,7 +22,6 @@
     "files.autoGuessEncoding": false,
     "editor.minimap.enabled": false,
     "vim.useSystemClipboard": true,
-    "vim.cmdLineInitialColon": true,
     "vim.hlsearch": true,
     "vim.visualstar": true,
     "vim.useCtrlKeys": true,
@@ -55,7 +54,7 @@
             "after": ["<C-o>", "$"]
         },
     ],
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<Esc>", "<Esc>"],
             "after": [],
