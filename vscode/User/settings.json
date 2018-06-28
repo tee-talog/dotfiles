@@ -31,6 +31,7 @@
         "<C-s>": false,
         "<C-w>": false,
         "<C-o>": false,
+        "<C-a>": false,
     },
     "vim.insertModeKeyBindings": [
         {
@@ -93,6 +94,14 @@
             "before": ["<C-k>"],
             "after": ["<C-y>"]
         },
+        {
+          "before": ["<leader>", "a"],
+          "after": ["<C-a>"]
+        },
+        {
+          "before": ["<leader>", "x"],
+          "after": ["<C-x>"]
+        }
     ],
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
