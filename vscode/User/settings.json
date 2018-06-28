@@ -1,3 +1,4 @@
+// https://vscode-doc-jp.github.io/docs/getstarted/keybindings.html#Default-Keyboard-Shortcuts
 {
     "editor.fontFamily": "'Myrica M', Consolas, 'Courier New', monospace, 'Segoe UI Emoji'",
     "editor.renderWhitespace": "none",
