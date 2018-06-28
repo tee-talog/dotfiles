@@ -1,3 +1,4 @@
+// https://vscode-doc-jp.github.io/docs/getstarted/keybindings.html#Default-Keyboard-Shortcuts
 {
     "editor.fontFamily": "'Myrica M', Consolas, 'Courier New', monospace, 'Segoe UI Emoji'",
     "editor.renderWhitespace": "none",
@@ -21,7 +22,6 @@
     "files.autoGuessEncoding": false,
     "editor.minimap.enabled": false,
     "vim.useSystemClipboard": true,
-    "vim.cmdLineInitialColon": true,
     "vim.hlsearch": true,
     "vim.visualstar": true,
     "vim.useCtrlKeys": true,
@@ -31,6 +31,7 @@
         "<C-s>": false,
         "<C-w>": false,
         "<C-o>": false,
+        "<C-a>": false,
     },
     "vim.insertModeKeyBindings": [
         {
@@ -54,7 +55,7 @@
             "after": ["<C-o>", "$"]
         },
     ],
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<Esc>", "<Esc>"],
             "after": [],
@@ -93,6 +94,14 @@
             "before": ["<C-k>"],
             "after": ["<C-y>"]
         },
+        {
+          "before": ["<leader>", "a"],
+          "after": ["<C-a>"]
+        },
+        {
+          "before": ["<leader>", "x"],
+          "after": ["<C-x>"]
+        }
     ],
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
