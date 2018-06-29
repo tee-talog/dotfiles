@@ -57,12 +57,10 @@
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<Esc>", "<Esc>"],
-            "after": [],
+            "before": ["<C-n>"],
             "commands": [
                 {
-                    "command": ":noh",
-                    "args": []
+                    "command": ":noh"
                 }
             ]
         },
