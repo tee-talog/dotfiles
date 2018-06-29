@@ -101,6 +101,16 @@
           "after": ["<C-x>"]
         }
     ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<"],
+            "after": ["<", "g", "v"]
+        },
+        {
+            "before": [">"],
+            "after": [">", "g", "v"]
+        }
+    ],
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
