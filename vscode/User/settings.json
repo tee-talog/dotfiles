@@ -100,6 +100,24 @@
             "before": ["<leader>", "x"],
             "after": ["<C-x>"]
         },
+        {
+            "before": ["u"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": ["<C-r>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
