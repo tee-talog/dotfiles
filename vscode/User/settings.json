@@ -118,6 +118,14 @@
                 }
             ]
         },
+        {
+            "before": ["<left>"],
+            "after": ["h"]
+        },
+        {
+            "before": ["<right>"],
+            "after": ["l"]
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -144,4 +152,5 @@
     ],
     "editor.wrappingIndent": "deepIndent",
     "gitlens.showWhatsNewAfterUpgrades": false,
+    "vim.whichwrap": "h,l,w,b",
 }
