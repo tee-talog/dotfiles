@@ -10,7 +10,7 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/node_modules": true
+        "**/node_modules": true,
     },
     "editor.acceptSuggestionOnEnter": "off",
     "editor.mouseWheelZoom": true,
@@ -60,7 +60,7 @@
             "before": ["<C-n>"],
             "commands": [
                 {
-                    "command": ":noh"
+                    "command": ":noh",
                 }
             ]
         },
@@ -93,13 +93,13 @@
             "after": ["<C-y>"]
         },
         {
-          "before": ["<leader>", "a"],
-          "after": ["<C-a>"]
+            "before": ["<leader>", "a"],
+            "after": ["<C-a>"]
         },
         {
-          "before": ["<leader>", "x"],
-          "after": ["<C-x>"]
-        }
+            "before": ["<leader>", "x"],
+            "after": ["<C-x>"]
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -109,7 +109,7 @@
         {
             "before": [">"],
             "after": [">", "g", "v"]
-        }
+        },
     ],
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
