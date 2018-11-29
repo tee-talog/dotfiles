@@ -46,14 +46,58 @@ local ZSH_BLUE="%F{063}"
 local ZSH_GREEN="%F{047}"
 local ZSH_GRAY="%F{244}"
 local ZSH_WHITE="%F{255}"
+local ZSH_YELLOW="%F{191}"
 
 ####################
 ## Prompt
 ####################
+function f_git_current_branch() {
+  if [[ ! -e ".git" ]]; then
+    return
+  fi
+
+  local _branch_name="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+  local readonly _status="$(git status 2>/dev/null)"
+
+  local _branch_status_color=""
+  local _branch_suffix=""
+
+  if [[ -n "$(echo "${_status}" | egrep "^nothing to")" ]]; then
+    _branch_status_color="${ZSH_GREEN}"
+  elif [[ -n "$(echo "${_status}" | egrep "^Untracked files")" ]]; then
+    _branch_status_color="${ZSH_RED}"
+    _branch_suffix="?"
+  elif [[ -n "$(echo "${_status}" | egrep "^Changes not staged for commit")" ]]; then
+    _branch_status_color="${ZSH_RED}"
+    _branch_suffix="+"
+  elif [[ -n "$(echo "${_status}" | egrep "^Changes to be committed")" ]]; then
+    _branch_status_color="${ZSH_YELLOW}"
+    _branch_suffix="!"
+  elif [[ -n "$(echo "${_status}" | egrep "^rebase in progress")" ]]; then
+    _branch_status_color="${ZSH_RED}"
+    _branch_suffix="!(no branch)"
+  else
+    _branch_status_color="${ZSH_BLUE}"
+  fi
+
+  echo "${_branch_status_color}${_branch_name}${_branch_suffix}"
+}
+
+function f_show_git_status_in_prompt() {
+  PROMPT="
+$ZSH_GRAY [%D{%Y/%m/%d} %*] $(f_git_current_branch)
+$ZSH_BLUE%(!,#,>) $ZSH_WHITE"
+}
+
 # normal
 PROMPT="
 $ZSH_GRAY [%D{%Y/%m/%d} %*]
 $ZSH_BLUE%(!,#,>) $ZSH_WHITE"
+
+# normal with git branch
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd f_show_git_status_in_prompt
+
 # right
 RPROMPT=$ZSH_GREEN'[%~]'$ZSH_WHITE
 setopt transient_rprompt
@@ -158,11 +202,17 @@ alias crontab='crontab -i'
 alias grep='(){ \grep "$1" --color=auto }'
 alias joinline='(){ paste -s -d "$1" - }'
 alias splitline='(){ tr "$1" "\n" }'
+alias j='git'
 
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
 }
 alias killall='f_killall'
+
+# global alias
+if [[ -x /usr/local/bin/peco ]]; then
+  alias -g B='"$(git branch -a | peco --prompt "Git Branch: " | head -n 1 | sed -e "s/^\*\s*//g" | xargs)"'
+fi
 
 # turn off <C-?> shortcut
 stty stop undef
