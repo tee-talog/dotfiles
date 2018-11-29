@@ -153,4 +153,7 @@
     "editor.wrappingIndent": "deepIndent",
     "gitlens.showWhatsNewAfterUpgrades": false,
     "vim.whichwrap": "h,l,w,b",
+    "editor.fontSize": 14,
+    "rest-client.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
 }

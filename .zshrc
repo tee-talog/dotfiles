@@ -3,6 +3,11 @@
 ####################
 source ~/.zplug/init.zsh
 
+# environment-specific plugin
+if [[ -f ~/.zsh-plugins ]]; then
+  source ~/.zsh-plugins
+fi
+
 # zsh 256 clor
 zplug "chrissicool/zsh-256color"
 # emojify
