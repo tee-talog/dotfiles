@@ -6,18 +6,26 @@
   editor = vim -c \"set fenc=utf-8\"
   autocrlf = input
   filemode = false
+  pager = less -R
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
 [alias]
-  graph = log --graph --all --decorate --color
   co = checkout
   s = status
+  b = branch
+  graph = log --graph --all --decorate --color
+  g = log --graph --all --decorate --color
   merged-feature-branchs = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
   mfb = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
-  b = branch
   diff-name = diff --name-only
+  branch-name = rev-parse --abbrev-ref HEAD
+  bn = rev-parse --abbrev-ref HEAD
+  list-alias = !git config --list | grep '^alias' | sed -E 's/^alias\\.//g' | sed -E 's/^([^=]+)=/\\1 = /g'
+  diff-line = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  word-diff = diff --word-diff-regex="\\w+" --color-words
+  diffc = diff --cached
 [merge]
   ff = false
 [pull]
