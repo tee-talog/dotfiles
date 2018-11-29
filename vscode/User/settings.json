@@ -156,4 +156,11 @@
     "editor.fontSize": 14,
     "rest-client.fontSize": 14,
     "terminal.integrated.fontSize": 14,
+    "window.zoomLevel": 0,
+    "local-history.dateLocale": "ja-JP",
+    "local-history.daysLimit": 366,
+    "local-history.maxDisplay": 16,
+    "local-history.saveDelay": 3,
+    "local-history.treeLocation": "localHistory",
+    "markdown.preview.breaks": true,
 }
