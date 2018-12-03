@@ -153,4 +153,6 @@
     "editor.wrappingIndent": "deepIndent",
     "gitlens.showWhatsNewAfterUpgrades": false,
     "vim.whichwrap": "h,l,w,b",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 0,
 }
