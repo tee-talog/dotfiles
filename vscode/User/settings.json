@@ -99,7 +99,15 @@
         {
           "before": ["<leader>", "x"],
           "after": ["<C-x>"]
-        }
+        },
+        {
+            "before": ["<Left>"],
+            "after": ["h"]
+        },
+        {
+            "before": ["<Right>"],
+            "after": ["l"]
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -124,5 +132,7 @@
     "terminal.integrated.shellArgs.windows": [
         "-l"
     ],
-    "editor.wrappingIndent": "deepIndent"
+    "editor.wrappingIndent": "deepIndent",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 0,
 }
