@@ -5,4 +5,5 @@
 .vim/undos/*
 .vim/plugins/*
 !.gitkeep
+vscode/User/workspaceStorage/
 
