@@ -5,4 +5,5 @@
 .vim/undos/*
 .vim/plugins/*
 !.gitkeep
+.DS_Store
 
