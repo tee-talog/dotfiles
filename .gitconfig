@@ -37,4 +37,6 @@
   tool = vimdiff
 [difftool "vimdiff"]
   cmd = vimdiff -o $LOCAL $REMOTE
+[user]
+  useConfigOnly = true
 
