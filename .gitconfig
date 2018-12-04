@@ -28,6 +28,7 @@
   diff-line = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   word-diff = diff --word-diff-regex="\\w+" --color-words
   diffc = diff --cached
+  parent-branch = !git show-branch | egrep -F '*' | egrep -vF "$(git rev-parse --abbrev-ref HEAD)" | head -1 | awk -F'[]~^[]' '{ print $2 }'
 [merge]
   ff = false
 [pull]
