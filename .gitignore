@@ -6,4 +6,5 @@
 .vim/plugins/*
 !.gitkeep
 .DS_Store
+vscode/User/workspaceStorage/
 

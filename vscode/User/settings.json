@@ -163,4 +163,6 @@
     "local-history.saveDelay": 3,
     "local-history.treeLocation": "localHistory",
     "markdown.preview.breaks": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 0,
 }
