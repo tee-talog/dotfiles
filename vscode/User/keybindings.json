@@ -21,5 +21,10 @@
 	{
 		"key": "ctrl+shift+[Minus]",
 		"command": "editor.action.fontZoomReset"
-	}
+	},
+	{
+		"key": "ctrl+n",
+		"command": "selectNextSuggestion",
+		"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+	},
 ]
