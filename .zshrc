@@ -80,7 +80,7 @@ function f_git_current_branch() {
     _branch_status_color="${ZSH_BLUE}"
   fi
 
-  echo "${_branch_status_color}${_branch_name}${_branch_suffix}"
+  echo "${_branch_status_color}${_branch_name} ${_branch_suffix}"
 }
 
 function f_show_git_status_in_prompt() {
