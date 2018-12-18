@@ -86,6 +86,12 @@ call dein#add('elzr/vim-json')
 call dein#add('wavded/vim-stylus')
 "" Syntax highlighting for Pug (Jade)
 call dein#add('digitaltoad/vim-pug')
+"" completion (deoplete)
+if !has('nvim')
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
 
 "" End installation
 call dein#end()
@@ -121,6 +127,11 @@ set noshowmode
 "" disable conceal in JSON file
 let g:vim_json_syntax_conceal = 0
 
+"" deoplete
+let g:deoplete#enable_at_startup = 1
+" no check
+let g:max_list=16
+
 
 "================================================"
 " Environment settings
@@ -129,12 +140,14 @@ let g:vim_json_syntax_conceal = 0
 "" to be able to use the mouse
 if has('mouse')
   set mouse=a
-  if has('mouse_sgr')
-    set ttymouse=sgr
-  elseif v:version > 703 || v:version is 703 && has('patch632')
-    set ttymouse=sgr
-  else
-    set ttymouse=xterm2
+  if !has('nvim')
+    if has('mouse_sgr')
+      set ttymouse=sgr
+    elseif v:version > 703 || v:version is 703 && has('patch632')
+      set ttymouse=sgr
+    else
+      set ttymouse=xterm2
+    endif
   endif
 endif
 
@@ -289,8 +302,9 @@ nnoremap N Nzz
 "" yank from cursor to line-end
 nnoremap Y y$
 
-"" transition to normal mode when you input `jj`
+"" transition to normal mode
 inoremap <silent> jj <ESC>
+inoremap <C-j> <ESC>
 
 "" no highlight
 nnoremap <ESC><ESC> :nohlsearch<CR>
