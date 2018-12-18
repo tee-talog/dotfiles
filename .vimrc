@@ -86,6 +86,12 @@ call dein#add('elzr/vim-json')
 call dein#add('wavded/vim-stylus')
 "" Syntax highlighting for Pug (Jade)
 call dein#add('digitaltoad/vim-pug')
+"" completion (deoplete)
+if !has('nvim')
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
 
 "" End installation
 call dein#end()
@@ -120,6 +126,11 @@ set noshowmode
 
 "" disable conceal in JSON file
 let g:vim_json_syntax_conceal = 0
+
+"" deoplete
+let g:deoplete#enable_at_startup = 1
+" no check
+let g:max_list=16
 
 
 "================================================"
