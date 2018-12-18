@@ -302,8 +302,9 @@ nnoremap N Nzz
 "" yank from cursor to line-end
 nnoremap Y y$
 
-"" transition to normal mode when you input `jj`
+"" transition to normal mode
 inoremap <silent> jj <ESC>
+inoremap <C-j> <ESC>
 
 "" no highlight
 nnoremap <ESC><ESC> :nohlsearch<CR>
