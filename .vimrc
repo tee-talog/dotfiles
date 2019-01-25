@@ -66,6 +66,8 @@ autocmd vimrc BufRead,BufNewFile *.vue setfiletype vue
 
 "" emmet
 call dein#add('mattn/emmet-vim')
+"" HTML close tag
+call dein#add('vim-scripts/closetag.vim')
 "" TypeScript syntax highlight
 call dein#add('leafgarland/typescript-vim')
 "" EditorConfig
