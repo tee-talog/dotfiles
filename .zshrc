@@ -64,15 +64,15 @@ function f_git_current_branch() {
 
   if [[ -n "$(echo "${_status}" | egrep "^nothing to")" ]]; then
     _branch_status_color="${ZSH_GREEN}"
+  elif [[ -n "$(echo "${_status}" | egrep "^Changes to be committed")" ]]; then
+    _branch_status_color="${ZSH_YELLOW}"
+    _branch_suffix="!"
   elif [[ -n "$(echo "${_status}" | egrep "^Untracked files")" ]]; then
     _branch_status_color="${ZSH_RED}"
     _branch_suffix="?"
   elif [[ -n "$(echo "${_status}" | egrep "^Changes not staged for commit")" ]]; then
     _branch_status_color="${ZSH_RED}"
     _branch_suffix="+"
-  elif [[ -n "$(echo "${_status}" | egrep "^Changes to be committed")" ]]; then
-    _branch_status_color="${ZSH_YELLOW}"
-    _branch_suffix="!"
   elif [[ -n "$(echo "${_status}" | egrep "^rebase in progress")" ]]; then
     _branch_status_color="${ZSH_RED}"
     _branch_suffix="!(no branch)"
