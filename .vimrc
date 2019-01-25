@@ -96,6 +96,8 @@ if !has('nvim')
 endif
 "" Git conflict highlighter
 call dein#add('rhysd/conflict-marker.vim')
+"" prettier
+call dein#add('prettier/vim-prettier', { 'build': 'npm install' })
 
 "" End installation
 call dein#end()
@@ -135,6 +137,24 @@ let g:vim_json_syntax_conceal = 0
 let g:deoplete#enable_at_startup = 1
 " no check
 let g:max_list=16
+
+"" prettier
+" plugin settings
+let g:prettier#autoformat = 0
+" prettier config
+let g:prettier#config#print_width = 80
+let g:prettier#config#tab_width = 2
+let g:prettier#config#use_tabs = 'false'
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'always'
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#parser = 'babylon'
+let g:prettier#config#config_precedence = 'cli-override'
+let g:prettier#config#prose_wrap = 'preserve'
 
 
 "================================================"
