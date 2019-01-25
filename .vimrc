@@ -88,7 +88,7 @@ call dein#add('elzr/vim-json')
 call dein#add('wavded/vim-stylus')
 "" Syntax highlighting for Pug (Jade)
 call dein#add('digitaltoad/vim-pug')
-"" completion (deoplete)
+"" completion
 if !has('nvim')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('roxma/nvim-yarp')
