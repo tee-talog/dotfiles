@@ -94,6 +94,8 @@ if !has('nvim')
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
 endif
+"" Git conflict highlighter
+call dein#add('rhysd/conflict-marker.vim')
 
 "" End installation
 call dein#end()
