@@ -265,6 +265,9 @@ export LESS_TERMCAP_me=$(tput sgr0)                 # Ends bold, blink and under
 export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4) # Begins standout-mode
 export LESS_TERMCAP_se=$(tput rmso; tput sgr0)                  # Ends standout-mode
 
+# https://yoheikoga.github.io/2016/07/19/change-ls-background-color/
+# export LSCOLORS=cxfxcxdxHxcgcdabagacad
+
 # no beep sound
 setopt no_beep
 
