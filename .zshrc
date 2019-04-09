@@ -14,6 +14,8 @@ zplug "chrissicool/zsh-256color"
 zplug "mrowa44/emojify", as:command
 # syntax highlighting
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# Yarn completion
+zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
 #------------------#
 # Apply
