@@ -54,9 +54,9 @@ local ZSH_YELLOW="%F{191}"
 ## Prompt
 ####################
 function f_git_current_branch() {
-  if [[ ! -e ".git" ]]; then
-    return
-  fi
+  # if [[ ! -e ".git" ]]; then
+  #   return
+  # fi
 
   local _branch_name="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
   local readonly _status="$(git status 2>/dev/null)"
