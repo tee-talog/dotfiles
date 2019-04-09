@@ -14,6 +14,8 @@ zplug "chrissicool/zsh-256color"
 zplug "mrowa44/emojify", as:command
 # syntax highlighting
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# Yarn completion
+zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
 #------------------#
 # Apply
@@ -52,9 +54,9 @@ local ZSH_YELLOW="%F{191}"
 ## Prompt
 ####################
 function f_git_current_branch() {
-  if [[ ! -e ".git" ]]; then
-    return
-  fi
+  # if [[ ! -e ".git" ]]; then
+  #   return
+  # fi
 
   local _branch_name="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
   local readonly _status="$(git status 2>/dev/null)"
@@ -203,6 +205,10 @@ alias grep='(){ \grep "$1" --color=auto }'
 alias joinline='(){ paste -s -d "$1" - }'
 alias splitline='(){ tr "$1" "\n" }'
 alias j='git'
+alias jbn="j bn"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
@@ -214,10 +220,13 @@ if [[ -x /usr/local/bin/peco ]]; then
   alias -g B='"$(git branch -a | peco --prompt "Git Branch: " | head -n 1 | sed -e "s/^\*\s*//g" | xargs)"'
 fi
 
-# turn off <C-?> shortcut
-stty stop undef
-stty swtch undef
-stty susp undef
+## turn off <C-?> shortcut
+#stty stop undef
+## stty swtch undef
+#stty susp undef
+
+# the function that is terminal stop and restart is desabled
+setopt no_flow_control
 
 ####################
 ## Character
@@ -239,7 +248,7 @@ setopt print_eight_bit
 ## Other
 ####################
 # auto change directory
-setopt auto_cd
+#setopt auto_cd
 # auto directory pushd that you can get dirs list by cd -[tab]
 setopt auto_pushd
 # not add to move history if duplicate directory in move history
@@ -255,6 +264,9 @@ export LESS_TERMCAP_us=$(tput bold; tput setaf 131) # Begins underline
 export LESS_TERMCAP_me=$(tput sgr0)                 # Ends bold, blink and underline
 export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4) # Begins standout-mode
 export LESS_TERMCAP_se=$(tput rmso; tput sgr0)                  # Ends standout-mode
+
+# https://yoheikoga.github.io/2016/07/19/change-ls-background-color/
+# export LSCOLORS=cxfxcxdxHxcgcdabagacad
 
 # no beep sound
 setopt no_beep
