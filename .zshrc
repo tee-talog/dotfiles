@@ -205,6 +205,10 @@ alias grep='(){ \grep "$1" --color=auto }'
 alias joinline='(){ paste -s -d "$1" - }'
 alias splitline='(){ tr "$1" "\n" }'
 alias j='git'
+alias jbn="j bn"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
@@ -241,7 +245,7 @@ setopt print_eight_bit
 ## Other
 ####################
 # auto change directory
-setopt auto_cd
+#setopt auto_cd
 # auto directory pushd that you can get dirs list by cd -[tab]
 setopt auto_pushd
 # not add to move history if duplicate directory in move history
