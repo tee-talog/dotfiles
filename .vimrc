@@ -230,7 +230,6 @@ set matchtime=0
 "" Input
 "--------------------------------------"
 set autoindent
-set smartindent
 "" tab ize
 set shiftwidth=4
 set tabstop=4
