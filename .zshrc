@@ -220,10 +220,13 @@ if [[ -x /usr/local/bin/peco ]]; then
   alias -g B='"$(git branch -a | peco --prompt "Git Branch: " | head -n 1 | sed -e "s/^\*\s*//g" | xargs)"'
 fi
 
-# turn off <C-?> shortcut
-stty stop undef
-stty swtch undef
-stty susp undef
+## turn off <C-?> shortcut
+#stty stop undef
+## stty swtch undef
+#stty susp undef
+
+# the function that is terminal stop and restart is desabled
+setopt no_flow_control
 
 ####################
 ## Character
