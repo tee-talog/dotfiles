@@ -35,6 +35,7 @@
   wdc = diff --cached --word-diff-regex="\\w+" --color-words
   parent-branch = !git show-branch | egrep -F '*' | egrep -vF "$(git rev-parse --abbrev-ref HEAD)" | head -1 | awk -F'[]~^[]' '{ print $2 }'
   force-pull-current = !git fetch && git reset --hard origin/"$(git rev-parse --abbrev-ref HEAD)"
+  checkout-history = !git reflog | grep -E '^.* +.* +checkout: +' | grep 'moving from' | awk '{ print $8 }' | uniq
 [merge]
   ff = false
 [pull]
