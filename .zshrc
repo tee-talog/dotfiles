@@ -209,6 +209,7 @@ alias jbn="j bn"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias y='yarn'
 
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
