@@ -18,6 +18,8 @@
   rs = reset
   d = diff
   st = stash
+  cmt = commit
+  cmtm = commit -m
   graph = log --graph --all --decorate --color
   g = log --graph --all --decorate --color
   merged-feature-branchs = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
