@@ -222,8 +222,7 @@ function f_checkout_history() {
   git reflog \
     | egrep '^.* +.* +checkout: +' \
     | grep 'moving from' \
-    | awk '{ print $8 }' \
-    | awk '!a[$0]++' \
+    | awk '!a[$8]++{ print $8 }' \
     | while read -r line; do
         echo $branches | egrep -F $line
       done
