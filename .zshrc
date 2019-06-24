@@ -211,6 +211,24 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias y='yarn'
 
+function f_checkout_history() {
+  # exist branches
+  local readonly branches=$(
+    git branch \
+      | sed -r -e 's/^\*? *//g'
+  )
+
+  # get checkout histories, then filter at the exist branches
+  git reflog \
+    | egrep '^.* +.* +checkout: +' \
+    | grep 'moving from' \
+    | awk '!a[$8]++{ print $8 }' \
+    | while read -r line; do
+        echo $branches | egrep -F $line
+      done
+}
+alias checkout-history='f_checkout_history'
+
 function f_killall() {
   ps -W | grep "$1" | awk '{print $1}' | while read -r line; do echo "${line}" | xargs kill -f; done
 }
