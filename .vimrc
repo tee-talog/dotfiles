@@ -18,20 +18,6 @@ set termencoding=UTF-8
 
 
 "================================================"
-" Color
-"================================================"
-
-set t_Co=256
-source ~/.vim/colors/zenburn.vim
-colorscheme zenburn
-
-"" Define original colors
-hi ColorColumn guifg=#000d18 gui=bold
-hi MatchParen guibg=#464646 guifg=#efefef gui=bold
-hi Search term=reverse ctermfg=230 ctermbg=238 guifg=#ffffe0 guibg=#4f4f4f gui=bold
-
-
-"================================================"
 " Plugin
 "================================================"
 
@@ -155,6 +141,20 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'babylon'
 let g:prettier#config#config_precedence = 'cli-override'
 let g:prettier#config#prose_wrap = 'preserve'
+
+
+"================================================"
+" Color
+"================================================"
+
+set t_Co=256
+source ~/.vim/colors/zenburn.vim
+colorscheme zenburn
+
+"" Define original colors
+"hi ColorColumn guifg=#000d18 gui=bold
+"hi MatchParen guibg=#464646 guifg=#efefef gui=bold
+"hi Search term=reverse ctermfg=230 ctermbg=238 guifg=#ffffe0 guibg=#4f4f4f gui=bold
 
 
 "================================================"
