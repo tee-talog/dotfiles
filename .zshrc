@@ -224,8 +224,10 @@ function f_checkout_history() {
     | grep 'moving from' \
     | awk '!a[$8]++{ print $8 }' \
     | while read -r line; do
-        echo $branches | egrep -F $line
-      done
+      if echo "${branches}" | egrep -F "${line}" &>/dev/null; then
+        echo "${line}"
+      fi
+    done
 }
 alias checkout-history='f_checkout_history'
 
