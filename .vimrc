@@ -301,6 +301,8 @@ syntax on
 source $VIMRUNTIME/macros/matchit.vim
 "" line wraps at right edge of window
 set wrap
+"" share OS clipboard
+set clipboard+=unnamed
 
 
 "================================================"
