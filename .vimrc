@@ -87,6 +87,10 @@ call dein#add('prettier/vim-prettier', { 'build': 'npm install' })
 
 "" color: hybrid
 call dein#add('w0ng/vim-hybrid')
+"" repeat macro command
+call dein#add('kana/vim-repeat')
+"" remap fFtT
+"call dein#add('aiya000/vim-fmap')
 
 "" End installation
 call dein#end()
@@ -144,6 +148,49 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'babylon'
 let g:prettier#config#config_precedence = 'cli-override'
 let g:prettier#config#prose_wrap = 'preserve'
+
+""" vim-fmap
+"nmap <leader>f <Plug>(fmap-forward-f)
+"nmap <leader>F <Plug>(fmap-backward-f)
+"nmap <leader>t <Plug>(fmap-forward-t)
+"nmap <leader>T <Plug>(fmap-backward-t)
+"
+"augroup VimFmap
+"  autocmd!
+"  autocmd VimEnter * FNoreMap > ＞
+"  autocmd VimEnter * FNoreMap ! ！
+"  autocmd VimEnter * FNoreMap # ＃
+"  autocmd VimEnter * FNoreMap $ ＄
+"  autocmd VimEnter * FNoreMap % ％
+"  autocmd VimEnter * FNoreMap & ＆
+"  autocmd VimEnter * FNoreMap ' ’
+"  autocmd VimEnter * FNoreMap ( （
+"  autocmd VimEnter * FNoreMap ) ）
+"  autocmd VimEnter * FNoreMap - ー
+"  autocmd VimEnter * FNoreMap = ＝
+"  autocmd VimEnter * FNoreMap ^ ＾
+"  autocmd VimEnter * FNoreMap ~ 〜
+"  "autocmd VimEnter * FNoreMap \ ￥
+"  "autocmd VimEnter * FNoreMap | ｜
+"
+"  autocmd VimEnter * FNoreMap @ ＠
+"  autocmd VimEnter * FNoreMap ` ｀
+"  autocmd VimEnter * FNoreMap [ 「
+"
+"  autocmd VimEnter * FNoreMap ; ；
+"  autocmd VimEnter * FNoreMap + ＋
+"  autocmd VimEnter * FNoreMap : ：
+"  autocmd VimEnter * FNoreMap * ＊
+"  autocmd VimEnter * FNoreMap ] 」
+"
+"  autocmd VimEnter * FNoreMap , 、
+"  autocmd VimEnter * FNoreMap < ＜
+"  autocmd VimEnter * FNoreMap . 。
+"  autocmd VimEnter * FNoreMap > ＞
+"  autocmd VimEnter * FNoreMap / ・
+"  autocmd VimEnter * FNoreMap ? ？
+"  autocmd VimEnter * FNoreMap _ ＿
+"augroup END
 
 
 "================================================"
@@ -308,6 +355,9 @@ set clipboard+=unnamed
 "================================================"
 " Key mappping
 "================================================"
+
+""" leader key
+let mapleader = "\<space>"
 
 "" the commands that move cursor when vim mode is insert mode
 "" foward
