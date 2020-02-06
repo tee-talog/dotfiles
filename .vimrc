@@ -91,6 +91,8 @@ call dein#add('w0ng/vim-hybrid')
 call dein#add('kana/vim-repeat')
 "" remap fFtT
 "call dein#add('aiya000/vim-fmap')
+"" highlight the active window
+call dein#add('TaDaa/vimade')
 
 "" End installation
 call dein#end()
@@ -390,7 +392,7 @@ nnoremap Y y$
 
 "" transition to normal mode
 inoremap <silent> jj <ESC>
-inoremap <C-j> <ESC>
+inoremap <C-i> <ESC>
 
 "" no highlight
 nnoremap <ESC><ESC> :nohlsearch<CR>
