@@ -392,7 +392,7 @@ nnoremap Y y$
 
 "" transition to normal mode
 inoremap <silent> jj <ESC>
-inoremap <C-j> <ESC>
+inoremap <C-i> <ESC>
 
 "" no highlight
 nnoremap <ESC><ESC> :nohlsearch<CR>
