@@ -16,6 +16,8 @@ zplug "mrowa44/emojify", as:command
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 # Yarn completion
 zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
+# Suggest command from history
+zplug "zsh-users/zsh-autosuggestions"
 
 #------------------#
 # Apply
