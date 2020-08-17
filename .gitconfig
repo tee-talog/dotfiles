@@ -18,6 +18,9 @@
   rs = reset
   d = diff
   st = stash
+  ps = push
+  pf = push -f
+  pl = pull
   ap = add -p
   aa = add .
   cpick = cherry-pick
