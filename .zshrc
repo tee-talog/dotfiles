@@ -18,6 +18,8 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 # Suggest command from history
 zplug "zsh-users/zsh-autosuggestions"
+# exhance cd command
+zplug "b4b4r07/enhancd", use:init.sh
 
 #------------------#
 # Apply
@@ -243,6 +245,29 @@ if [[ -x /usr/local/bin/peco ]]; then
   alias -g B='"$(git branch -a | peco --prompt "Git Branch: " | head -n 1 | sed -e "s/^\*\s*//g" | xargs)"'
 fi
 
+alias checkout-in-checkout-history='git checkou t"$(checkout-history | peco --on-cancel=error)"'
+alias cich='git checkout "$(checkout-history | peco --on-cancel=error)"'
+alias changes-select-interactive="git status \
+	| egrep -v '^  \(use' \
+	| egrep -v '^nothing to commit, working tree clean' \
+	| egrep '^\s' \
+	| egrep -v '^$' \
+	| sed -r -e 's/^\s+//g' \
+	| sed -r -e '/^(modified|deleted|new file)/{ b skip }; s/^/4:untracked file:/g; :skip' \
+	| sed -r \
+		-e 's/^new file:\s*/1:new file:/g' \
+		-e 's/modified:\s*/2:modified:/g' \
+		-e 's/deleted:\s*/3:deleted:/g' \
+	| sort -t: -k1,1 -k3,3 \
+	| sed -r \
+		-e 's/^1:new file:/new file:       /g' \
+		-e 's/^2:modified:/modified:       /g' \
+		-e 's/^3:deleted:/deleted:        /g' \
+		-e 's/^4:untracked file:/untracked file: /g' \
+	| peco --on-cancel=error \
+	| sed -r -e 's/^(new file|modified|deleted|untracked file):\s+//'"
+alias csit="changes-select-interactive"
+
 ## turn off <C-?> shortcut
 #stty stop undef
 ## stty swtch undef
@@ -289,7 +314,7 @@ export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4) # Begins standou
 export LESS_TERMCAP_se=$(tput rmso; tput sgr0)                  # Ends standout-mode
 
 # https://yoheikoga.github.io/2016/07/19/change-ls-background-color/
-# export LSCOLORS=cxfxcxdxHxcgcdabagacad
+export LSCOLORS=cxfxcxdxHxcgcdabagacad
 
 # no beep sound
 setopt no_beep
