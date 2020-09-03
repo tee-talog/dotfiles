@@ -245,7 +245,7 @@ if [[ -x /usr/local/bin/peco ]]; then
   alias -g B='"$(git branch -a | peco --prompt "Git Branch: " | head -n 1 | sed -e "s/^\*\s*//g" | xargs)"'
 fi
 
-alias checkout-in-checkout-history='git checkou t"$(checkout-history | peco --on-cancel=error)"'
+alias checkout-in-checkout-history='git checkout "$(checkout-history | peco --on-cancel=error)"'
 alias cich='git checkout "$(checkout-history | peco --on-cancel=error)"'
 alias changes-select-interactive="git status \
 	| egrep -v '^  \(use' \
