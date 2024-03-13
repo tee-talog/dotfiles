@@ -1,0 +1,68 @@
+[user]
+  name = talog
+  email = tee.talog@gmail.com
+[core]
+  quotepath = false
+  editor = nvim -c \"set fenc=utf-8\"
+  autocrlf = input
+  filemode = false
+  pager = less -R
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[alias]
+  co = checkout
+  s = status
+  b = branch
+  rs = reset
+  d = diff
+  st = stash
+  ps = push
+  pf = push -f
+  pl = pull
+  ap = add -p
+  aa = add .
+  cpick = cherry-pick
+  cmt = commit
+  comit = commit
+  commmit = commit
+  cmtm = commit -m
+  commit-ane = commit --amend --no-edit
+  cmt-ane = commit --amend --no-edit
+  graph = log --graph --all --decorate --color
+  g = log --graph --all --decorate --color
+  diffc = diff --cached
+  dc = diff --cached
+  dh = diff HEAD~ HEAD
+  diff-name = diff --name-only
+  branch-name = rev-parse --abbrev-ref HEAD
+  bn = rev-parse --abbrev-ref HEAD
+
+  merged-feature-branchs = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
+  mfb = !git branch --merged | sed -r -e 's/^\\*? *//g' | grep -E "^feature/"
+  list-alias = !git config --list | grep '^alias' | sed -E 's/^alias\\.//g' | sed -E 's/^([^=]+)=/\\1 = /g'
+  diff-line = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  word-diff = diff --word-diff-regex="\\w+" --color-words
+  wd = diff --word-diff-regex="\\w+" --color-words
+  word-diffc = diff --cached --word-diff-regex="\\w+" --color-words
+  wdc = diff --cached --word-diff-regex="\\w+" --color-words
+  parent-branch = !git show-branch | egrep -F '*' | egrep -vF "$(git rev-parse --abbrev-ref HEAD)" | head -1 | awk -F'[]~^[]' '{ print $2 }'
+  force-pull-current = !git fetch && git reset --hard origin/"$(git rev-parse --abbrev-ref HEAD)"
+  checkout-history = !git reflog | grep -E '^.* +.* +checkout: +' | grep 'moving from' | awk '{ print $8 }' | uniq
+[merge]
+  ff = false
+[pull]
+  ff = only
+[diff]
+  algorithm = histogram
+  tool = vimdiff
+[difftool "vimdiff"]
+  cmd = vimdiff -o $LOCAL $REMOTE
+[user]
+  useConfigOnly = true
+[credential]
+	helper = cache --timeout=18000
+
+[url "https://"]
+	insteadOf = git://

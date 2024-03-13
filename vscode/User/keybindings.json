@@ -1,0 +1,30 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+	{
+		"key": "ctrl+shift+f",
+		"command": "actions.find"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "-actions.find"
+	},
+	{
+		"key": "ctrl+alt+f",
+		"command": "workbench.action.findInFiles",
+		"when": "!searchInputBoxFocus"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "-workbench.action.findInFiles",
+		"when": "!searchInputBoxFocus"
+	},
+	{
+		"key": "ctrl+shift+[Minus]",
+		"command": "editor.action.fontZoomReset"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "selectNextSuggestion",
+		"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+	},
+]

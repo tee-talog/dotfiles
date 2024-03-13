@@ -1,0 +1,90 @@
+root = true
+
+####################
+## Base settings
+####################
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = tab
+trim_trailing_whitespace = false
+
+####################
+## Markdown
+####################
+[*.md]
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = false
+
+####################
+## Property Languages
+####################
+[*.properties]
+trim_trailing_whitespace = false
+
+[*.yaml]
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = false
+
+[*.json]
+indent_size = 2
+indent_style = space
+
+####################
+## Java (includes AltJava)
+####################
+[*.{java,groovy,scala,kt}]
+trim_trailing_whitespace = true
+
+[*.scala]
+indent_size = 2
+indent_style = space
+
+####################
+## JavaScript (includes AltJS)
+####################
+[*.{js,jsx,ts,tsx,vue}]
+trim_trailing_whitespace = true
+
+[*.vue]
+indent_size = 2
+indent_style = space
+
+####################
+## Python
+####################
+[*.py]
+inent_size = 4
+indent_style = space
+
+####################
+## ShellScript
+####################
+[*.{sh,bash,zsh}]
+indent_size = 2
+indent_style = space
+
+####################
+## HTML
+####################
+[*.{html,htm,jsp,ejs}]
+indent_size = 4
+indent_style = space
+
+####################
+## dotfiles
+####################
+[.*]
+indent_size = 2
+indent_style = space
+
+####################
+## css
+####################
+[*.{css,scss,sass,styl}]
+indent_size = 2
+indent_style = space
+

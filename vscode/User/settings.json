@@ -1,0 +1,166 @@
+// https://vscode-doc-jp.github.io/docs/getstarted/keybindings.html#Default-Keyboard-Shortcuts
+{
+    "editor.fontFamily": "'Myrica M', Consolas, 'Courier New', monospace, 'Segoe UI Emoji'",
+    "editor.renderWhitespace": "none",
+    "editor.insertSpaces": false,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.mouseWheelZoom": true,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "html.format.indentInnerHtml": true,
+    "files.autoGuessEncoding": false,
+    "editor.minimap.enabled": false,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.visualstar": true,
+    "vim.useCtrlKeys": true,
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-x>": false,
+        "<C-s>": false,
+        "<C-w>": false,
+        "<C-o>": false,
+        "<C-a>": false,
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<C-f>"],
+            "after": ["<C-o>", "l"]
+        },
+        {
+            "before": ["<C-b>"],
+            "after": ["<C-o>", "h"]
+        },
+        {
+            "before": ["<C-a>"],
+            "after": ["<C-o>", "^"]
+        },
+        {
+            "before": ["<C-e>"],
+            "after": ["<C-o>", "$"]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-n>"],
+            "commands": [
+                {
+                    "command": ":noh",
+                }
+            ]
+        },
+            {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
+        {
+            "before": ["n"],
+            "after": ["n", "z", "z"]
+        },
+        {
+            "before": ["N"],
+            "after": ["N", "z", "z"]
+        },
+        {
+            "before": ["Y"],
+            "after": ["y", "$"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-e>"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-y>"]
+        },
+        {
+            "before": ["<leader>", "a"],
+            "after": ["<C-a>"]
+        },
+        {
+            "before": ["<leader>", "x"],
+            "after": ["<C-x>"]
+        },
+        {
+            "before": ["u"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": ["<C-r>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        },
+        {
+            "before": ["<left>"],
+            "after": ["h"]
+        },
+        {
+            "before": ["<right>"],
+            "after": ["l"]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<"],
+            "after": ["<", "g", "v"]
+        },
+        {
+            "before": [">"],
+            "after": [">", "g", "v"]
+        },
+    ],
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1"
+    },
+    "terminal.integrated.shellArgs.windows": [
+        "-l"
+    ],
+    "editor.wrappingIndent": "deepIndent",
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "vim.whichwrap": "h,l,w,b",
+    "editor.fontSize": 14,
+    "rest-client.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "window.zoomLevel": 0,
+    "local-history.dateLocale": "ja-JP",
+    "local-history.daysLimit": 366,
+    "local-history.maxDisplay": 16,
+    "local-history.saveDelay": 3,
+    "local-history.treeLocation": "localHistory",
+    "markdown.preview.breaks": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 0,
+}
