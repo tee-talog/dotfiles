@@ -5,9 +5,8 @@ My dotfiles
 * .zshrc
 * .zshenv
 * .editorconfig
-* .vimrc
-* .vim/
 * .gitconfig
 * .npmrc
 * vscode
+* .config (nvim)
 
