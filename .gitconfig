@@ -19,7 +19,7 @@
   d = diff
   st = stash
   ps = push
-  pf = push -f
+  pf = push --force-with-lease
   pl = pull
   ap = add -p
   aa = add .
