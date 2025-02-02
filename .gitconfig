@@ -13,14 +13,18 @@
   required = true
 [alias]
   co = checkout
+  com = checkout master
   s = status
   b = branch
   rs = reset
   d = diff
   st = stash
   ps = push
+  psc = push origin "$(git rev-parse --abbrev-ref HEAD)"
   pf = push --force-with-lease
+  pfc = push --force-with-lease origin "$(git rev-parse --abbrev-ref HEAD)"
   pl = pull
+  plc = pull origin "$(git rev-parse --abbrev-ref HEAD)"
   ap = add -p
   aa = add .
   cpick = cherry-pick
@@ -28,13 +32,13 @@
   comit = commit
   commmit = commit
   cmtm = commit -m
-  commit-ane = commit --amend --no-edit
+  cmt-a = commit --amend
   cmt-ane = commit --amend --no-edit
   graph = log --graph --all --decorate --color
   g = log --graph --all --decorate --color
-  diffc = diff --cached
   dc = diff --cached
   dh = diff HEAD~ HEAD
+  dm = diff master...HEAD
   diff-name = diff --name-only
   branch-name = rev-parse --abbrev-ref HEAD
   bn = rev-parse --abbrev-ref HEAD
